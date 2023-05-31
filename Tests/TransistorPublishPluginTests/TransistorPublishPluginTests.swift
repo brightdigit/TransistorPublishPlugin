@@ -1,12 +1,8 @@
-import XCTest
 @testable import TransistorPublishPlugin
+import XCTest
 
-final class TransistorPublishPluginTests: XCTestCase {
-    func testExample() throws {
-        // XCTest Documenation
-        // https://developer.apple.com/documentation/xctest
-
-        // Defining Test Cases and Test Methods
-        // https://developer.apple.com/documentation/xctest/defining_test_cases_and_test_methods
-    }
+internal final class TransistorPublishPluginTests: XCTestCase {
+  internal func testExample() throws {
+    XCTAssert(true)
+  }
 }

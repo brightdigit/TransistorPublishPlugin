@@ -58,24 +58,24 @@ jobs:
         run: echo "$GITHUB_WORKSPACE/swift-${SWIFT_VER}-RELEASE-ubuntu${RELEASE_DOT}/usr/bin" >> $GITHUB_PATH
       - name: Build
         run: swift build
-      # - name: Test
-      #   run: swift test --enable-code-coverage
-      # - uses: sersoft-gmbh/swift-coverage-action@v3
-      #   with:
-      #     fail-on-empty-output: true
-      # - name: Upload package coverage to Codecov
-      #   uses: codecov/codecov-action@v3
-      #   with:
-      #     fail_ci_if_error: true
-      #     flags: spm,swift-${{ matrix.swift-version }}
-      #     token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Test
+        run: swift test --enable-code-coverage
+      - uses: sersoft-gmbh/swift-coverage-action@v3
+        with:
+          fail-on-empty-output: true
+      - name: Upload package coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          fail_ci_if_error: true
+          flags: spm,swift-${{ matrix.swift-version }}
+          token: ${{ secrets.CODECOV_TOKEN }}
   build-macos:
     name: Build on macOS
     runs-on: ${{ matrix.runs-on }}
     if: "!contains(github.event.head_commit.message, 'ci skip')"
     strategy:
       matrix:
-        include:         
+        include:
           - runs-on: macos-13
             xcode: "/Applications/Xcode_14.3.app"
             iOSVersion: "16.4"
@@ -141,7 +141,6 @@ jobs:
         run: ./scripts/lint.sh
         if: startsWith(matrix.xcode,'/Applications/Xcode_14.3')
       - name: Dump PIF
-        #if: startsWith(matrix.xcode,'/Applications/Xcode_14')
         if: startsWith(matrix.xcode,'/Applications/Xcode_14.3')
         run: |
           swift package dump-pif > /dev/null
@@ -152,7 +151,7 @@ jobs:
             ATTEMPT=$(($ATTEMPT+1))
           done
       - name: Run iOS target tests
-        run: xcodebuild test -scheme TransistorPublishPlugin-Package -sdk iphonesimulator -destination 'platform=iOS Simulator,name=${{ matrix.iPhoneName }},OS=${{ matrix.iOSVersion }}' -enableCodeCoverage YES build test
+        run: xcodebuild test -scheme TransistorPublishPlugin -sdk iphonesimulator -destination 'platform=iOS Simulator,name=${{ matrix.iPhoneName }},OS=${{ matrix.iOSVersion }}' -enableCodeCoverage YES build test
         if: startsWith(matrix.xcode,'/Applications/Xcode_14.3')
       - uses: sersoft-gmbh/swift-coverage-action@v3
         if: startsWith(matrix.xcode,'/Applications/Xcode_14.3')
@@ -166,7 +165,7 @@ jobs:
           flags: iOS,iOS-${{ matrix.iOSVersion }}
           token: ${{ secrets.CODECOV_TOKEN }}
       - name: Run watchOS target tests
-        run: xcodebuild build -scheme TransistorPublishPlugin-Package -sdk watchsimulator -destination 'platform=watchOS Simulator,name=${{ matrix.watchName }},OS=${{ matrix.watchOSVersion }}'
+        run: xcodebuild build -scheme TransistorPublishPlugin -sdk watchsimulator -destination 'platform=watchOS Simulator,name=${{ matrix.watchName }},OS=${{ matrix.watchOSVersion }}'
         if: startsWith(matrix.xcode,'/Applications/Xcode_14.3')
       - uses: sersoft-gmbh/swift-coverage-action@v3
         if: startsWith(matrix.xcode,'/Applications/Xcode_14.3')
