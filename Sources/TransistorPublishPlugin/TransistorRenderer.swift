@@ -15,3 +15,11 @@ public protocol TransistorRenderer {
   /// Renders an EmbeddedTransistor into string.
   func render(transistor: EmbeddedTransistor) -> String
 }
+
+/// Provides a default implementation of the `TransistorRenderer` protocol.
+public extension TransistorRenderer where Self == DefaultTransistorRenderer {
+  /// The default `TransistorRenderer` instance.
+  static var `default`: TransistorRenderer {
+    DefaultTransistorRenderer()
+  }
+}

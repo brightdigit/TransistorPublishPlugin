@@ -10,7 +10,7 @@ public extension Plugin {
   /// - Parameter renderer: The renderer to use for rendering Transistor blockquote.
   /// - Returns: A new Transistor plugin.
   static func transistor(
-    renderer: TransistorRenderer = DefaultTransistorRenderer()
+    renderer: TransistorRenderer = .default
   ) -> Self {
     Plugin(name: "Transistor") { context in
       context.markdownParser.addModifier(.transistorBlockQuote(using: renderer))
