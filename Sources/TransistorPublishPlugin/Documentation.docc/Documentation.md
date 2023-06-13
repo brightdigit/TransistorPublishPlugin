@@ -1,10 +1,10 @@
 # ``TransistorPublishPlugin``
 
-A Publish plugin that makes it easy to embed Transistor podcasts in your posts on any Publish website.
+A Publish plugin that makes it easy to embed transistor.fm podcasts in your posts on any Publish website.
 
 ## Overview
 
-Using blockquotes in your markdown, you can easily embed the Transisitor podcast player in your website.
+Using blockquotes in your markdown, you can easily embed the [Transistor](https://transistor.fm/?via=publish-plugin) podcast player in your [Publish](https://github.com/johnsundell/publish) website.
 
 ### Requirements 
 
@@ -17,7 +17,6 @@ Using blockquotes in your markdown, you can easily embed the Transisitor podcast
 
 **Linux**
 
-// @Leo
 - Ubuntu 18.04 or later
 - Swift 5.8 or late
 
@@ -31,6 +30,10 @@ let package = Package(
   dependencies: [
       ...
       .package(
+        url: "https://github.com/johnsundell/publish.git", 
+        from: "0.9.0"
+      ),
+      .package(
         url: "https://github.com/brightdigit/TransistorPublishPlugin.git",
         from: "1.0.0"
       )
@@ -40,6 +43,7 @@ let package = Package(
       ...
       dependencies: [
           ...
+          .product(name: "Publish", package: "publish"),
           .product(name: "TransistorPublishPlugin", package: "TransistorPublishPlugin"),
       ]
     )
@@ -73,7 +77,18 @@ try DeliciousRecipes().publish(using: [
 ])
 ```
 
-Lastly, in your article add a block quote with a url to a podcast episode's simple share url or social media landing page:
+Lastly, get the share url from your podcast episode. On [Transistor](https://transistor.fm/?via=publish-plugin), this is known as either the podcast episode's simple share url or social media landing page:
+
+**Copy the URL from the Episode List**
+![Copy the URL from the Episode List](CopyFromEpisodeList.gif)
+
+**Copy the URL from the Episode Page**
+![Copy the URL from the Episode Page](CopyFromEpisodePage.gif)
+
+**Copy the URL from the Social Page**
+![Copy the URL from the Social Page](CopyFromEpisodeShare.gif)
+
+In your article add a block quote with the url to a podcast episode:
 
 ```markdown
 A thing to know about iOS apps is, that in a lot of cases, people don’t need the cloud to store their data. It can just be stored on their phone.
@@ -89,3 +104,4 @@ Now you should see the embed on your rendered page:
 
 ## Topics
 
+* ``Publish/Plugin/transistor(renderer:)``
