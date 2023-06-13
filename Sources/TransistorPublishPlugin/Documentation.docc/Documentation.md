@@ -4,6 +4,8 @@ A Publish plugin that makes it easy to embed transistor.fm podcasts in your post
 
 ## Overview
 
+![Transistor Logo](transistor)
+
 Using blockquotes in your markdown, you can easily embed the [Transistor](https://transistor.fm/?via=publish-plugin) podcast player in your [Publish](https://github.com/johnsundell/publish) website.
 
 ### Requirements 

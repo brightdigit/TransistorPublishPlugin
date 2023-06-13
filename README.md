@@ -1,4 +1,11 @@
-# TransistorPublishPlugin
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="Sources/TransistorPublishPlugin/Documentation.docc/Resources/logos/transistor~dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="Sources/TransistorPublishPlugin/Documentation.docc/Resources/logos/transistor.svg">
+    <img alt="Transistor" src="Sources/TransistorPublishPlugin/Documentation.docc/Resources/logos/transistor.svg"  height="200">
+  </picture>
+</p>
+<h1 align="center"> TransistorPublishPlugin </h1>
 
 A [Publish](https://github.com/JohnSundell/Publish) plugin that makes it easy to embed [Transistor](https://transistor.fm/?via=publish-plugin) podcasts in your posts on any Publish website.
 
