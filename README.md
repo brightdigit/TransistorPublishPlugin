@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="Sources/TransistorPublishPlugin/Documentation.docc/Resources/logos/transistor~dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="Sources/TransistorPublishPlugin/Documentation.docc/Resources/logos/transistor.svg">
-    <img alt="Transistor" src="Sources/TransistorPublishPlugin/Documentation.docc/Resources/logos/transistor.svg"  height="200">
+    <img alt="Transistor" src="Sources/TransistorPublishPlugin/Documentation.docc/Resources/logos/transistor.svg"  height="100">
   </picture>
 </p>
 <h1 align="center"> TransistorPublishPlugin </h1>
@@ -21,7 +21,7 @@ A [Publish](https://github.com/JohnSundell/Publish) plugin that makes it easy to
 
 [![Codecov](https://img.shields.io/codecov/c/github/brightdigit/TransistorPublishPlugin)](https://codecov.io/gh/brightdigit/TransistorPublishPlugin)
 [![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/brightdigit/TransistorPublishPlugin)](https://www.codefactor.io/repository/github/brightdigit/TransistorPublishPlugin)
-[![codebeat badge](https://codebeat.co/badges/508ff110-90aa-4a3d-be48-1ffcc8009dd1)](https://codebeat.co/projects/github-com-brightdigit-npmpublishplugin-main)
+[![codebeat badge](https://codebeat.co/badges/dc9f822b-7989-4612-9769-94b80002eef7)](https://codebeat.co/projects/github-com-brightdigit-transistorpublishplugin-main)
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/brightdigit/TransistorPublishPlugin)](https://codeclimate.com/github/brightdigit/TransistorPublishPlugin)
 [![Code Climate technical debt](https://img.shields.io/codeclimate/tech-debt/brightdigit/TransistorPublishPlugin?label=debt)](https://codeclimate.com/github/brightdigit/TransistorPublishPlugin)
 [![Code Climate issues](https://img.shields.io/codeclimate/issues/brightdigit/TransistorPublishPlugin)](https://codeclimate.com/github/brightdigit/TransistorPublishPlugin)
