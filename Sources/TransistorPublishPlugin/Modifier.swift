@@ -3,13 +3,13 @@ import Ink
 import Publish
 
 /// An modifier for Ink that helps rendering a Transistor blockquotes into HTML string.
-public extension Modifier {
+extension Modifier {
   /// Creates a new modifier.
   /// It uses a renderer to convert Transistor blockquote into HTML
   ///
   /// - Parameter renderer: The renderer to use for rendering Transistor blockquote.
   /// - Returns: A new modifier.
-  static func transistorBlockQuote(using renderer: TransistorRenderer) -> Self {
+  public static func transistorBlockQuote(using renderer: TransistorRenderer) -> Self {
     Modifier(target: .blockquotes) { html, markdown in
       // Removes the arrow > and trims any whitespaces from the markdown.
       var markdown = markdown.dropFirst().trimmingCharacters(in: .whitespaces)

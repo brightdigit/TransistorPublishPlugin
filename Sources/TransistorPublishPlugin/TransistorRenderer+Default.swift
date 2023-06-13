@@ -11,9 +11,9 @@ public struct DefaultTransistorRenderer: TransistorRenderer {
 }
 
 /// Provides a default implementation of the `TransistorRenderer` protocol.
-public extension TransistorRenderer where Self == DefaultTransistorRenderer {
+extension TransistorRenderer where Self == DefaultTransistorRenderer {
   /// The default `TransistorRenderer` instance.
-  static var `default`: TransistorRenderer {
+  public static var `default`: TransistorRenderer {
     DefaultTransistorRenderer()
   }
 }
