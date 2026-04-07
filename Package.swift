@@ -14,10 +14,7 @@ let package = Package(
   ],
   dependencies: [
     .package(path: "../../Publish/Publish"),
-    .package(
-      url: "https://github.com/JohnSundell/Ink",
-      from: "0.6.0"
-    )
+    .package(path: "../../Publish/Ink")
   ],
   targets: [
     .target(
