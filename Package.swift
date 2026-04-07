@@ -13,10 +13,7 @@ let package = Package(
     )
   ],
   dependencies: [
-    .package(
-      url: "https://github.com/johnsundell/publish.git",
-      from: "0.9.0"
-    ),
+    .package(path: "../../Publish/Publish"),
     .package(
       url: "https://github.com/JohnSundell/Ink",
       from: "0.6.0"
@@ -26,7 +23,7 @@ let package = Package(
     .target(
       name: "TransistorPublishPlugin",
       dependencies: [
-        .product(name: "Publish", package: "publish"),
+        .product(name: "Publish", package: "Publish"),
         .product(name: "Ink", package: "Ink")
       ]
     ),
