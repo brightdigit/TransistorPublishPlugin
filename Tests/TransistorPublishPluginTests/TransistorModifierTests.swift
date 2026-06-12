@@ -1,7 +1,8 @@
 import Ink
 import Publish
-@testable import TransistorPublishPlugin
 import XCTest
+
+@testable import TransistorPublishPlugin
 
 internal final class TransistorModifierTests: XCTestCase {
   private var parser: MarkdownParser = .init(modifiers: [
