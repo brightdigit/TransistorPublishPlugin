@@ -1,12 +1,20 @@
 {
+  "originHash" : "a25a66efa1bc1557e20b572694e159c18b17be85097abba3b39820d9c065adda",
   "pins" : [
     {
-      "identity" : "shellout",
+      "identity" : "files",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/johnsundell/shellout.git",
+      "location" : "https://github.com/brightdigit/Files.git",
       "state" : {
-        "revision" : "e1577acf2b6e90086d01a6d5e2b8efdaae033568",
-        "version" : "2.3.0"
+        "revision" : "2983eb8104844a0e874bb375356e690e31d2716e"
+      }
+    },
+    {
+      "identity" : "plot",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/brightdigit/Plot.git",
+      "state" : {
+        "revision" : "daa8daa44f8eb0a1865085ee0f36ca02aa16b7f4"
       }
     },
     {
@@ -28,5 +36,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
