@@ -13,8 +13,8 @@ let package = Package(
     )
   ],
   dependencies: [
-    .package(path: "../../Publish/Publish"),
-    .package(path: "../../Publish/Ink")
+    .package(name: "Publish", path: "../../Publish/Publish"),
+    .package(name: "Ink", path: "../../Publish/Ink")
   ],
   targets: [
     .target(
