@@ -19,8 +19,14 @@ let package = Package(
     )
   ],
   dependencies: [
-    .package(name: "Publish", path: "../../Publish/Publish"),
-    .package(name: "Ink", path: "../../Publish/Ink")
+    .package(
+      url: "https://github.com/brightdigit/Publish.git",
+      branch: "brightdigit-com-260406"
+    ),
+    .package(
+      url: "https://github.com/brightdigit/Ink.git",
+      branch: "brightdigit-com-260406"
+    )
   ],
   targets: [
     .target(
