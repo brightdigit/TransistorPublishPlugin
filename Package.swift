@@ -25,7 +25,7 @@ let package = Package(
     ),
     .package(
       url: "https://github.com/brightdigit/Ink.git",
-      branch: "brightdigit-com-260406"
+      branch: "v1.0.0"
     )
   ],
   targets: [
