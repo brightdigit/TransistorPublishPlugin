@@ -1,13 +1,13 @@
 {
-  "originHash" : "a9204e54cd2419575477f30e58da70c4d047080f5feb21818cbcc9ddf61d352d",
+  "originHash" : "c46f39c9b8e76d54cc9dd0e619b690feb0d67ca86329d7e9aea0eec867812803",
   "pins" : [
     {
       "identity" : "files",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/brightdigit/Files.git",
       "state" : {
-        "branch" : "brightdigit-com-260406",
-        "revision" : "7ee69ba0bfc0d2c771458ea17ee4933545e896a8"
+        "branch" : "main",
+        "revision" : "923a4c9ec51384583ec15b21b3196e784a1c0b81"
       }
     },
     {
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/brightdigit/Ink.git",
       "state" : {
-        "branch" : "brightdigit-com-260406",
-        "revision" : "443d80e352ec3cdd07eed54bd84a9789378d8665"
+        "branch" : "main",
+        "revision" : "775a97078469706f76a91f9507c209079c25f2e5"
       }
     },
     {
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/brightdigit/Plot.git",
       "state" : {
-        "branch" : "brightdigit-com-260406",
-        "revision" : "c357a8a5303159900017176a1450f6b825e6fb93"
+        "branch" : "main",
+        "revision" : "793bca83340d09694f5207660a9e319079185131"
       }
     },
     {
@@ -34,7 +34,7 @@
       "location" : "https://github.com/brightdigit/Publish.git",
       "state" : {
         "branch" : "brightdigit-com-260406",
-        "revision" : "7118f0a6967a98f3e8e0b69c696be85258504ed2"
+        "revision" : "b90b75b160cbec318640e50d2e19f92ab4bb4514"
       }
     },
     {
@@ -52,7 +52,7 @@
       "location" : "https://github.com/swiftlang/swift-markdown.git",
       "state" : {
         "branch" : "main",
-        "revision" : "4661b550c55abde97d14e35b89e094084669f40a"
+        "revision" : "27b7fc1a19068bcea3d2072db0ce86360d1400ed"
       }
     }
   ],
