@@ -21,7 +21,7 @@ let package = Package(
   dependencies: [
     .package(
       url: "https://github.com/brightdigit/Publish.git",
-      branch: "brightdigit-com-260406"
+      branch: "main"
     ),
     .package(
       url: "https://github.com/brightdigit/Ink.git",
