@@ -42,3 +42,5 @@ let package = Package(
     )
   ]
 )
+
+// swiftlint:enable explicit_acl explicit_top_level_acl
