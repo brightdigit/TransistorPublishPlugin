@@ -1,11 +1,17 @@
-// swift-tools-version: 5.8
+// swift-tools-version:6.4
 // swiftlint:disable explicit_acl explicit_top_level_acl
 
 import PackageDescription
 
 let package = Package(
   name: "TransistorPublishPlugin",
-  platforms: [.macOS(.v12)],
+  // Files (via Publish) needs iOS 18 / tvOS 18 / watchOS 11 for Synchronization.Mutex.
+  platforms: [
+    .macOS(.v15),
+    .iOS(.v18),
+    .tvOS(.v18),
+    .watchOS(.v11)
+  ],
   products: [
     .library(
       name: "TransistorPublishPlugin",
@@ -14,19 +20,19 @@ let package = Package(
   ],
   dependencies: [
     .package(
-      url: "https://github.com/johnsundell/publish.git",
-      from: "0.9.0"
+      url: "https://github.com/brightdigit/Publish.git",
+      from: "1.0.0-alpha.1"
     ),
     .package(
-      url: "https://github.com/JohnSundell/Ink",
-      from: "0.6.0"
+      url: "https://github.com/brightdigit/Ink.git",
+      from: "1.0.0-alpha.1"
     )
   ],
   targets: [
     .target(
       name: "TransistorPublishPlugin",
       dependencies: [
-        .product(name: "Publish", package: "publish"),
+        .product(name: "Publish", package: "Publish"),
         .product(name: "Ink", package: "Ink")
       ]
     ),
@@ -36,3 +42,5 @@ let package = Package(
     )
   ]
 )
+
+// swiftlint:enable explicit_acl explicit_top_level_acl

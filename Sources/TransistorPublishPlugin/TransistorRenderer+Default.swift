@@ -2,7 +2,7 @@ import Foundation
 
 /// A default implementation for TransistorRenderer.
 /// It just provides the html string hold by the transistor.
-public struct DefaultTransistorRenderer: TransistorRenderer {
+public struct DefaultTransistorRenderer: TransistorRenderer, Sendable {
   /// Initializes a new DefaultTransistorRenderer.
   public init() {}
 
